@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111216">
+  <title>Privacy policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #111216;
+      --foreground: #e1e1e7;
+      --muted: #d5d5dc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: Roboto, "Arial", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .status-bar {
+      height: 56px;
+      padding: 0 27px 0 29px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: .1px;
+    }
+
+    .status-icons {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 15px;
+    }
+
+    .battery {
+      width: 13px;
+      height: 20px;
+      border: 2px solid currentColor;
+      border-radius: 2px;
+      position: relative;
+      display: inline-block;
+      transform: scale(.78);
+    }
+
+    .battery::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 2px;
+      background: currentColor;
+      top: -5px;
+      left: 2px;
+    }
+
+    .battery::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      background: currentColor;
+    }
+
+    .toolbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 0 27px;
+    }
+
+    .back {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      color: var(--foreground);
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .back svg {
+      width: 29px;
+      height: 29px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 29px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: -.5px;
+    }
+
+    main {
+      padding: 46px 26px 80px;
+      max-width: 760px;
+    }
+
+    .policy-copy {
+      color: var(--muted);
+      font-size: 24px;
+      line-height: 1.47;
+      font-weight: 400;
+      letter-spacing: .05px;
+    }
+
+    .policy-copy p {
+      margin: 0 0 40px;
+    }
+
+    .policy-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .navigation-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--background);
+    }
+
+    .navigation-bar span {
+      width: 108px;
+      height: 5px;
+      border-radius: 99px;
+      background: #f2f2f5;
+    }
+
+    @media (max-width: 480px) {
+      .status-bar {
+        height: 48px;
+        padding-inline: 25px;
+      }
+
+      .toolbar {
+        height: 68px;
+        padding-inline: 24px;
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      main {
+        padding: 48px 25px 70px;
+      }
+
+      .policy-copy {
+        font-size: clamp(19px, 5.1vw, 24px);
+        line-height: 1.48;
+      }
+
+      .policy-copy p {
+        margin-bottom: 39px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="status-bar" aria-hidden="true">
+    <span>10:20</span>
+    <div class="status-icons">
+      <span>✈</span>
+      <span class="battery"></span>
+      <span>69%</span>
+    </div>
+  </div>
+
+  <header class="toolbar">
+    <a class="back" href="#" aria-label="Go back" onclick="if (history.length > 1) { history.back(); } else { return false; }">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M19 12H5M11 5l-7 7 7 7"/>
+      </svg>
+    </a>
+    <h1>Privacy policy</h1>
+  </header>
+
+  <main>
+    <article class="policy-copy">
+      <p>Walingo does not collect, store on any server, share or sell any personal data.</p>
+
+      <p>The app works entirely offline. It does not request any device permissions and does not connect to the internet.</p>
+
+      <p>Your notes, favorites, learning progress and settings are stored only on your device. You can delete them at any time from Settings, or by uninstalling the app.</p>
+
+      <p>The app contains no ads, analytics or third-party tracking.</p>
+
+      <p>If you have questions, contact the developer through the app's Google Play listing.</p>
+    </article>
+  </main>
+
+  <div class="navigation-bar" aria-hidden="true"><span></span></div>
+</body>
+</html>
